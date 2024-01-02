@@ -1,0 +1,8 @@
+---
+permalink: advisories.csv
+---
+
+name,published,updated,url
+{%- for advisory in site.data.advisories %}
+{{ advisory.name }},{{ advisory.published | date: "%F" }},{{ advisory.updated | date: "%F" }},{{ advisory.url }}
+{%- endfor %}

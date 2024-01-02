@@ -1,0 +1,11 @@
+---
+permalink: advisories.yml
+---
+
+---
+{%- for advisory in site.data.advisories %}
+- name:      {{ advisory.name }}
+  published: {{ advisory.published | date: "%F" }}
+  updated:   {{ advisory.updated | date: "%F" }}
+  url:       {{ advisory.url }}
+{%- endfor %}

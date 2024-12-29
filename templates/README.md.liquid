@@ -1,0 +1,11 @@
+---
+permalink: README.md
+---
+
+Advisories
+==========
+
+{% for advisory in site.data.advisories %}
+* [{{ advisory.name }}]({{ advisory.url }})  
+  {{ advisory.description }}
+{% endfor %}

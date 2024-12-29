@@ -1,0 +1,26 @@
+---
+permalink: advisories.html
+---
+
+<table>
+  <colgroup>
+    <col span="1">
+    <col span="1">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Published</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%- for advisory in site.data.advisories %}
+    <tr>
+      <td><a href="{{ advisory.url }}">{{ advisory.name }}</a></td>
+      <td>{{ advisory.published | date: "%F" }}</td>
+      <td>{{ advisory.updated | date: "%F" }}</td>
+    </tr>
+  {%- endfor %}
+  </tbody>
+</table>
